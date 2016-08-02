@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_p12_2g3_vw">
+ <title>Named Profiles</title>
+ <conbody>
+  <p>The AWS CLI supports <i>named profiles</i> stored in the config and credentials files. You can
+   configure additional profiles by using <codeph>aws configuration</codeph> with the
+    <codeph>--profile</codeph> option or by adding entries to the config and credentials files. </p>
+  <p>The following example shows a credentials file with two profiles:</p>
+  <p><codeph><b>~/.aws/credentials</b></codeph></p>
+  <p>
+   <codeblock>[default]
+aws_access_key_id=<i>AKIAIOSFODNN7EXAMPLE</i>
+aws_secret_access_key=<i>wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY</i>
+
+[user2]
+aws_access_key_id=<i>AKIAI44QH8DHBEXAMPLE</i>
+aws_secret_access_key=<i>je7MtGbClwBF/2Zp9Utk/h3yCo8nvbEXAMPLEKEY</i></codeblock>
+  </p>
+  <p><codeph><b>~/.aws/config</b></codeph></p>
+  <codeblock>[default]
+region=us-west-2
+output=json
+
+[profile user2]
+region=us-east-1
+output=text</codeblock>
+  <note>The AWS credentials file uses a different nameing format than the CLI config file for names
+   profiles. Do not include the 'profile' prefix when configuring a names files in the AWS
+   credentials file.</note>
+  <p><b>Using Profiles with the AWS CLI</b></p>
+  <p>To use a named profile, add <codeph>--profile</codeph> option to your command. The following
+   example lists running instances using the <codeph>user2</codeph> profile from the previous
+   section.</p>
+  <p>
+   <codeblock>$ aws ec2 describe-instances --profile user2</codeblock>
+  </p>
+  <p>If you are going to use a names profile for multiple commands, you can avoid specifying the
+   profile in every command by setting the AWS_FDEFAULT_PROFILE environment variable at the comnmand
+   line:</p>
+  <p><b>Linux, OS X, or Unix</b></p>
+  <p>
+   <codeblock>$ export AWS_DEFAULT_PROFILE=user2</codeblock>
+  </p>
+  <p><b>Windows</b></p>
+  <p>
+   <codeblock>> set AWS_DEFAULT_PROFILE=user2</codeblock>
+  </p>
+  <p>Setting the environmnet variable chnages the default profile until the end of your shell
+   session, or until you set the variable to a different value. More on variables in the next
+   section</p>
+ </conbody>
+</concept>

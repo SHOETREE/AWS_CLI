@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_y1h_24g_vw">
+ <title>Configuring the AWS Command Line Interface</title>
+ <conbody>
+  <p>This section explains how to configure settings that the AWS Command Line Interface uses when
+   interacting with AWS, such as your security credentials and the default region.<note>The AWS CLI
+    signs requests on  your behalf, and includes a date in the signature. Ensure that your
+    computer's date and time are set correctly; if not, the date in the signature may not match the
+    date of the request, and AWS rejects the requests.</note></p>
+  <p><draft-comment author="NBS">Need to convert the following section titles to XRefs once they are
+    drafted.</draft-comment><ul>
+   <li>Using the Examples in this Guide</li>
+   <li>Quick Configuration</li>
+   <li>Configuration Settings and Precedence</li>
+   <li>Configuration and Credential Files</li>
+   <li>Named Profiles</li>
+   <li>Environmental Variables</li>
+   <li>Command Line Options</li>
+   <li>Instance Metadata</li>
+  </ul></p>
+ </conbody>
+</concept>

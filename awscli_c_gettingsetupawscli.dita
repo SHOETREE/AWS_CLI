@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_wny_wgz_5w">
+ <title>Getting Set Up with AWS Command Line Interface</title>
+ <conbody>
+  <p>Before you can start using the AWS Command Line Interface, you must sign up for an AWS account
+   (if you don't already have one) and set up you CLI environment. Depending on your operating
+   system and environment, there are different ways to install the AWS CLI:</p>
+  <p>
+   <ul id="ul_u5l_jhz_5w">
+    <li>MSI installaer</li>
+    <li>Bundled installer</li>
+    <li>pip</li>
+   </ul>
+  </p>
+  <p>The following sections will help you decide which option to use.</p>
+  <p>
+   <note>The AWS CLI makes API calls to services over HTTPS. Outblound connections on TCP port 443
+    must be enabled in order to perform calls.</note>
+  </p>
+ </conbody>
+</concept>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_acn_wfz_5w">
+ <title>AWS Command Line Interface</title>
+ <conbody>
+  <p>The AWS Command Line Interface (CLI) is a unified tools to manage your AWS services. With just
+   one tool to download and configure, you can control multiple AWS services from the command line
+   and automate them through scripts.</p>
+  <p>The AWS CLI introduces a new set of simple file commands for efficient file transfers to and
+   from Amazon S3.</p>
+ </conbody>
+</concept>

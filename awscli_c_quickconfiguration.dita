@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_y4b_bph_vw">
+ <title>Quick Configuration</title>
+
+ <conbody>
+  <p>For genral use, the <userinput>aws configure</userinput> command is the fastest way to set up
+   your AWS CLI installation.</p>
+  <codeblock>$ aws configure
+AWS Access Key ID [None]: <i><b>AKIAIOSFODNN7EXAMPLE</b></i>
+AWS Secret Access Key [None]: <i><b>wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY</b></i>
+Default region name [None]: <i><b>us-west-2</b></i>
+Default output format [None]: <i><b>json</b></i></codeblock>
+
+  <p>The AWS CLI will prompt you for four pieces of information, AWS Access Key ID and AWS Secret
+   Access Key are your account credentials. If you don't have keys, see the Getting Set Up section
+   earlier in this guide.</p>
+  <p>Default region is the name of the region you want to make calls against by default. This is
+   usually the region closest to you, but it can be any region.</p><note>You must specify an AWS regio when using the AWS CLI. For a list of services and available
+   regions, see Regions and EndPoints.</note><draft-comment author="NBS">Convert to XREF when it is available.</draft-comment>
+  <p>Default output format can be either json, text, or table. If you don't specify an output format, json will be used.</p>
+  <p>If you have multiple profiles, you can configure additional, names profiles by using the
+    <codeph>--profile</codeph> option.</p>
+  <codeblock>$ <b>aws configure --profile user2</b>  
+AWS Access Key ID [None]: <i><b>AKIAIOSFODNN7EXAMPLE</b></i>
+AWS Secret Access Key [None]: <i><b>wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY</b></i>
+Default region name [None]: <i><b>us-east-1</b></i>
+Default output format [None]: <i><b>text</b></i></codeblock>
+  <p>To update any of your settings, simply run <codeph>aws configure</codeph> again and enter new values as appropriate. The following sections contain more information on the files that <codeph>aws configure</codeph> creates, additional settings, and named profiles. </p>
+ </conbody>
+</concept>

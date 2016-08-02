@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_hss_bvh_vw">
+ <title>Configuration Settings and Precedence</title>
+ <conbody>
+  <p>The AWS CLI uses a <i>provider chain</i> to look for AWS credentials in a number of different
+   places, including system or user environment variables and local AWS configuration files.</p>
+  <p>The AWS CLI looks for credentials and configuration settings in the following order:</p>
+  <p>
+   <ol id="ol_cf5_2yh_vw">
+    <li><b>Command Line Option —</b>region, output format, and profile can be specified as command
+     options to overide defautl settings.</li>
+    <li><b>Environment Variables —</b><codeph>AWS_ACCESS_KEY_ID,AWS_SECRET_ACCESS_KEY</codeph>, and
+     so forth.</li>
+    <li><b>AWS credential file —</b> located at <filepath>~/.aws/credntials</filepath> on Linux, OS
+     X, or Unix or at <codeph>C:\Users\<i>USERNAME</i>\.aws\credentials</codeph> on Windows. This
+     file can contain multiple names profiles in addition to a default profile.</li>
+    <li><b>CLI configuration file —</b> typically located at <codeph>~/.AWS/CONFIG</codeph> on
+     Linux, OSX, or Unix, or at <codeph>C\Users\<i>USERNAME</i>\.aws\config</codeph> on Windows.
+     This file can contain a default profile, names profiles, and CLI specific configuration
+     parameters for each.</li>
+    <li><b>Instance profile credentials —</b> these credentials can be used on EC2 instances with an
+     assigned instance role, and are delivered through the Amazon EC2 metadata service.</li>
+   </ol>
+  </p>
+ </conbody>
+</concept>
